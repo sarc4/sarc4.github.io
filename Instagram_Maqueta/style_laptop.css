@@ -1,0 +1,29 @@
+#storys {
+  margin-left: 1.5rem;
+  display: block;
+}
+
+#personal .fotoperfil {
+  margin: 1rem 2.5rem 0 0;
+}
+
+#personal .info .header button {
+  font-size: smaller;
+}
+
+#feed .categorias {
+  justify-content: center;
+}
+
+#feed .categorias span {
+  align-items: center;
+  margin: 0 0.75rem;
+}
+
+#feed .grid {
+  grid-gap: 1.5rem;
+}
+#feed .grid .item {
+  height: 310px;
+  width: 310px;
+}

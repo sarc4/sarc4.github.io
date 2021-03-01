@@ -1,5 +1,3 @@
-/********************** Mobile First *********************/
-
 * {
   font-family: "Roboto", sans-serif;
   background: #fafafa;
@@ -20,6 +18,7 @@
   padding: 0 0.5rem;
 }
 
+/************************ NAV ************************/
 #navbar {
   background: #fafafa;
   border-bottom: 1px solid #d6d6d6;
@@ -69,15 +68,16 @@
   background: url(./img/perfil.jpg) center center/cover;
   margin-left: 0.5rem;
 }
+
 /************ SECTION PERSONAL ***************/
 #personal {
-  height: 150px;
   display: flex;
+  justify-content: space-around;
 }
 
 #personal .fotoperfil {
   display: flex;
-  margin: 2rem;
+  margin: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -190,7 +190,7 @@ p {
 #storys ul {
   display: flex;
   list-style: none;
-  padding-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 
 #storys ul li {
@@ -265,135 +265,15 @@ p {
 #feed .grid .item {
   display: flex;
   height: 123px;
-  width: 123px;
+  width: auto;
   transition: all 0.2s ease-in-out;
 }
 #feed .grid .item:hover {
   cursor: pointer;
-  /* transform: scale(1.2); */
 }
 
 #feed .grid .item img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-/******************  tablets hasta 768px ******************/
-@media (min-width: 481px) {
-  .container {
-    max-width: 980px;
-  }
-  #navbar .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #navbar img {
-    width: 130px;
-  }
-
-  #navbar .search {
-    display: block;
-  }
-
-  #personal {
-    height: 300px;
-    display: flex;
-  }
-
-  #personal .header {
-    margin: 2rem 0 1.5rem 0;
-  }
-
-  #personal #verif {
-    display: block;
-  }
-  #personal #config {
-    display: none;
-  }
-
-  #personal #editarperfil {
-    display: none;
-  }
-
-  #personal .fotoperfil {
-    margin-right: 3rem;
-  }
-
-  #personal .fotoperfil img {
-    width: 180px;
-    height: 180px;
-    margin-right: 3rem;
-  }
-
-  #personal .info .header button {
-    display: block;
-    font-size: x-small;
-  }
-
-  #personal .info .header .user {
-    font-size: 28px;
-  }
-
-  #personal .stats {
-    display: flex;
-    font-size: smaller;
-  }
-
-  #personal .descripcion {
-    display: block;
-  }
-
-  #personal .descripcion .followers {
-    display: block;
-  }
-
-  #feed .categorias {
-    margin-top: 1rem;
-    border: none;
-  }
-
-  #feed .categorias span strong {
-    display: inline-block;
-  }
-
-  #feed span.active {
-    border-top: 1px solid #333232;
-  }
-
-  #feed .grid {
-    grid-gap: 1rem;
-  }
-  #feed .grid .item {
-    height: 250px;
-    width: 250px;
-  }
-}
-
-/***********  screens & laptops & el resto ***********/
-@media (min-width: 769px) {
-  #storys {
-    display: block;
-  }
-
-  #personal .info .header button {
-    font-size: smaller;
-  }
-
-  #feed .categorias {
-    justify-content: center;
-  }
-
-  #feed .categorias span {
-    margin: 0 0.75rem;
-  }
-
-  #feed .grid {
-    grid-gap: 1.5rem;
-  }
-  #feed .grid .item {
-    height: 310px;
-    width: 310px;
-  }
 }

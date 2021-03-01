@@ -1,0 +1,83 @@
+.container {
+  max-width: 980px;
+}
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar img {
+  width: 130px;
+}
+
+#navbar .search {
+  display: block;
+}
+
+#personal {
+  display: flex;
+  
+  margin: 0 1rem 1rem 1rem;
+}
+
+#personal #verif {
+  display: block;
+}
+
+#personal #config,
+#personal #editarperfil {
+  display: none;
+}
+
+#personal .fotoperfil {
+  margin-right: 2rem;
+}
+
+#personal .fotoperfil img {
+  width: 180px;
+  height: 180px;
+}
+
+#personal .info .header button {
+  display: block;
+  font-size: x-small;
+}
+
+#personal .info .header .user {
+  font-size: 28px;
+}
+
+#personal .stats {
+  display: flex;
+  font-size: smaller;
+}
+
+#personal .descripcion {
+  display: block;
+}
+
+#personal .descripcion .followers {
+  display: block;
+}
+
+#feed .categorias {
+  margin-top: 1rem;
+  border: none;
+}
+
+#feed .categorias span strong {
+  display: inline-block;
+}
+
+#feed span.active {
+  border-top: 1px solid #333232;
+}
+
+#feed .grid {
+  grid-gap: 1rem;
+}
+#feed .grid .item {
+  height: 250px;
+  width: 250px;
+}
+}
