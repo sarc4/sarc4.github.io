@@ -25,6 +25,12 @@ header,
   display: block;
 }
 
+@media (max-width: 822px) {
+  #header-responsive #categoria {
+    display: none;
+  }
+}
+
 #header-responsive .button-group {
   justify-content: center;
 }
