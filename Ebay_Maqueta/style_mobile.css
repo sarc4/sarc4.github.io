@@ -1,0 +1,220 @@
+* {
+  font-family: "Roboto", sans-serif;
+  color: rgb(29, 28, 28);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+}
+
+/*HEADER*************************************************************/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header-mobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+#header-mobile .hamburger {
+  font-size: x-large;
+  align-self: center;
+  position: relative;
+}
+#header-mobile #checkbox {
+  display: block;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+#header-mobile a {
+  display: inline-block;
+  align-self: center;
+  padding-top: 2px;
+}
+
+#header-responsive {
+  display: none;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+#header-responsive.change {
+  display: flex;
+}
+
+#header-responsive .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#header-responsive button,
+#header-responsive input,
+#header-responsive select {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: none;
+}
+#header-responsive input,
+#header-responsive select {
+  border: 1px solid rgb(151, 151, 151);
+}
+#header-responsive input:focus {
+  outline: none;
+}
+#header-responsive #categoria {
+  display: none;
+}
+#header-responsive .button-group {
+  display: flex;
+}
+#header-responsive .button-group button {
+  width: 50%;
+}
+#header-responsive .button-group #buscar {
+  order: 1;
+  background-color: rgb(71, 71, 238);
+  color: #fff;
+}
+
+#header-responsive .button-group #buscar:hover {
+  background-color: rgb(45, 45, 224);
+  color: #fff;
+}
+
+button#categoria:hover,
+button#avanzada:hover,
+button#ahorra:hover {
+  background-color: rgb(126, 126, 126);
+  color: rgb(255, 255, 255);
+}
+
+/*NAV**************************************************************/
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: smaller;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+nav ul li :hover,
+nav ul li :hover i,
+nav ul li .active {
+  color: rgb(71, 71, 238);
+  font-weight: bold;
+}
+
+nav ul li .active {
+  border-bottom: 1px solid rgb(71, 71, 238);
+  padding-bottom: 0.3rem;
+}
+
+/*SECTION OFERTAS*****************************************************/
+#ofertas {
+  display: grid;
+  grid-template-columns: repeat(1, 4fr);
+}
+
+#ofertas a {
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#ofertas article {
+  display: none;
+}
+#ofertas a h3 {
+  color: #fff;
+}
+
+#ofertas a:nth-child(2) {
+  background: url(img/iphone.jpg) center center / cover no-repeat;
+}
+#ofertas a:nth-child(3) {
+  background: url(img/smartw.jpg) center center / cover no-repeat;
+}
+#ofertas a:nth-child(4) {
+  background: url(img/mac.jpg) center center / cover no-repeat;
+}
+
+/*PARRAFO****************************************************************/
+#parrafo h2 {
+  text-align: center;
+}
+
+/*SECTION CATEGORIAS******************************************************/
+#categorias {
+  text-align: center;
+}
+
+#categorias ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+#categorias ul li {
+  list-style: none;
+}
+
+#categorias ul li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#categorias ul li h3 {
+  display: none;
+  font-size: 18px;
+  margin-bottom: 0rem;
+}
+#categorias ul li a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/******* FOOTER *************************************************************/
+
+footer {
+  bottom: 0;
+  right: 0;
+  padding: 0.25rem 0;
+  margin-top: 1rem;
+  background-color: rgb(223, 222, 222);
+  text-align: center;
+  font-size: smaller;
+}
+
+footer {
+  width: 100%;
+}

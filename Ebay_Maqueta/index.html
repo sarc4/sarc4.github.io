@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style_mobile.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 481px)"
+      href="style_tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 769px)"
+      href="style_laptop.css"
+    />
+
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="64x64" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Artículos electrónicos, autos, ropa, objetos de colección, cupones y más |
+      eBay
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div id="header-mobile">
+          <a href="#"><img src="img/logo.png" alt="Logo" id="logo" /></a>
+          <label class="hamburger" for="menu-btn">
+            <i class="fas fa-bars" id="hambur-icon"></i>
+          </label>
+          <input type="checkbox" id="checkbox" onclick="onClick()"/>
+        </div>
+        <div id="header-responsive">
+          <button id="categoria">Comprar por categoria</button>
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Buscar articulos"
+              id="input_buscar"
+            />
+            <select name="categorias" id="categorias">
+              <option value="todas" selected>Todas las categorías</option>
+              <option value="val1">Smartphones</option>
+              <option value="val2">Relojes</option>
+              <option value="val3">Camaras</option>
+              <option value="val4">Juegos de Mesa</option>
+              <option value="val5">Videojuegos</option>
+              <option value="val6">Ecologicos</option>
+            </select>
+          </div>
+          <div class="button-group">
+            <button id="buscar">Buscar</button>
+            <button id="avanzada">Busqueda Avanzada</button>
+          </div>
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li>
+            <a href="#"><i class="fas fa-heart"></i> Guardados</a>
+          </li>
+          <li><a href="#">Tecnología</a></li>
+          <li><a href="#">Moda</a></li>
+          <li><a href="#">Salud y Belleza</a></li>
+          <li><a href="#">Vehículos</a></li>
+          <li><a href="#">Colección y arte</a></li>
+          <li><a href="#">Equipo industrial</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="#">Hogar y Jardin</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Por menos de US $30</a></li>
+        </ul>
+      </nav>
+
+      <section id="ofertas">
+        <article>
+          <h1>¡Aprovecha estas ofertas antes que se..</h1>
+          <p>Increibles descuentos en articulos en todo el mundo.</p>
+          <button>Ahorra ya <i class="fas fa-arrow-right"></i></button>
+        </article>
+        <a href="#">
+          <h3>Smartphones</h3>
+        </a>
+        <a href="#">
+          <h3>Smartwatches</h3>
+        </a>
+        <a href="#">
+          <h3>Computers</h3>
+        </a>
+      </section>
+
+      <div id="parrafo">
+        <h2>Esto te puede interesar...</h2>
+      </div>
+
+      <section id="categorias">
+        <ul>
+          <li><a href="#"><img src="./img/ofertas.png" alt=""><h3>Ofertas</h3></li></a>
+          <li><a href="#"><img src="./img/webcam2.png" alt=""><h3>Webcams</h3></li></a>
+          <li><a href="#"><img src="./img/relojes.png" alt=""><h3>Relojes</h3></li></a>
+          <li><a href="#"><img src="./img/smartphones.png" alt=""><h3>Smartphones</h3></li></a>
+          <li><a href="#"><img src="./img/videogames.png" alt=""><h3>Videogames</h3></li></a>
+          <li><a href="#"><img src="./img/juegos.png" alt=""><h3>Juegos de Mesa</h3></li></a>
+          <li><a href="#"><img src="./img/eco.png" alt=""><h3>Ecologicos</h3></li></a>
+        </ul>
+      </section>
+
+    </div>
+      
+    <footer>
+        <h3>Copyright &copy; <span id="year"></span> Ebay Inc</h3>
+    </footer>
+
+
+
+
+
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    // On Click Checkbox
+    function onClick(){
+      document.getElementById("checkbox").classList.toggle("change");
+      
+      document.getElementById("header-responsive").classList.toggle("change");
+      
+      console.log(document.getElementById("header-responsive").classList);
+
+
+      //Cambio el icono
+      const classList = document.getElementById("hambur-icon").classList;
+      if(classList.contains("fa-bars"))
+        {
+        classList.replace("fa-bars", "fa-times");
+        } else
+        {
+        classList.replace("fa-times", "fa-bars");
+        }
+        console.log(classList);
+    
+    }
+
+
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+  </script>
+  </body>
+</html>

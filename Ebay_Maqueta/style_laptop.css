@@ -1,0 +1,108 @@
+.container {
+  max-width: 1200px;
+}
+
+/*HEADER*************************************************************/
+header {
+  justify-content: center;
+}
+header,
+#header-responsive,
+#header-responsive .input-group {
+  flex-direction: row;
+}
+
+#header-mobile {
+  justify-content: center;
+}
+#header-responsive .button-group #buscar {
+  order: -1;
+}
+
+#header-responsive #categoria,
+#header-responsive .input-group #categorias,
+#header-responsive .button-group #avanzada {
+  display: block;
+}
+
+#header-responsive .button-group {
+  justify-content: center;
+}
+#header-responsive {
+  display: flex;
+}
+
+#header-responsive button {
+  padding: 0.25rem 1rem;
+}
+
+#header-responsive .input-group {
+  display: flex;
+  margin: 0.25rem;
+  border-radius: 3px;
+  border: 1px solid rgb(151, 151, 151);
+  width: auto;
+}
+
+#header-responsive .input-group #input_buscar {
+  margin-right: 0;
+  border: none;
+  width: auto;
+}
+
+#header-responsive .input-group #categorias {
+  margin-left: 0;
+  border: none;
+  border-radius: 0;
+  border-left: 1px solid rgb(151, 151, 151);
+}
+
+#header-responsive input,
+#header-responsive select {
+  padding: auto auto;
+  margin: 0;
+}
+
+/*NAV*/
+nav {
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+/*SECTION OFERTAS*****************************************************/
+#ofertas {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+#ofertas h1,
+#ofertas p {
+  text-align: left;
+}
+
+/*PARRAFO*/
+#parrafo h2 {
+  text-align: left;
+}
+
+/*SECTION CATEGORIAS******************************************************/
+
+#categorias {
+  margin: 1rem 0;
+}
+
+#categorias ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-gap: 0.5rem;
+  justify-content: center;
+}
+
+#categorias ul li:last-child {
+  display: block;
+}
+
+/*FOOTER ******************************************************/
+footer {
+  margin-top: 1rem;
+  position: fixed;
+}

@@ -1,0 +1,56 @@
+/*HEADER*************************************************************/
+#header-mobile {
+  justify-content: center;
+}
+#header-mobile .hamburger {
+  display: none;
+}
+
+#header-responsive .input-group #categorias,
+#header-responsive .button-group #avanzada {
+  display: none;
+}
+
+#header-responsive .button-group {
+  justify-content: center;
+}
+#header-responsive {
+  display: flex;
+}
+
+/*SECTION OFERTAS*****************************************************/
+#ofertas {
+  grid-template-columns: repeat(2, 2fr);
+}
+#ofertas article {
+  display: block;
+  font-weight: 800;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+#ofertas article h1 {
+  font-size: x-large;
+}
+
+#ofertas button {
+  margin: 1rem 0rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: none;
+}
+
+#ofertas button:hover {
+  background-color: rgb(126, 126, 126);
+  color: rgb(255, 255, 255);
+}
+
+/*SECTION CATEGORIAS******************************************************/
+
+#categorias ul {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+#categorias ul li:last-child {
+  display: none;
+}
