@@ -26,36 +26,34 @@ h1 {
   color: #3a405a;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-
-  color: #3a405a;
-}
-
 .lista {
   text-align: center;
 }
 
 .lista li {
-  width: 200px;
-  padding: 10px;
-  margin: 0 0 10px 0;
-  background: #f9dec9;
   list-style: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 400;
-  letter-spacing: 2px;
-  transition: letter-spacing 0.3s;
 }
 
-.lista li:hover,
-.lista li:active {
+.lista button {
+  width: 200px;
+  padding: 20px;
+  margin: 5px 10px;
+  background: #f9dec9;
+  border: none;
+  cursor: pointer;
+  transition: letter-spacing 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.lista button:hover,
+.lista button:active {
   letter-spacing: 8px;
+}
+.lista button:focus {
+  outline: none;
 }
 
 /******************  tablets hasta 768px ******************/
@@ -64,16 +62,16 @@ a:active {
     margin: 2rem 0;
     font-size: 2.5em;
   }
-  .lista li {
+  .lista button {
     width: 300px;
-    padding: 20px;
-    margin: 0 0 20px 0;
+    padding: 30px;
+    margin: 10px 20px;
     font-size: 1.25em;
     letter-spacing: 4px;
   }
 
-  .lista li:hover,
-  .lista li:active {
+  .lista button:hover,
+  .lista button:active {
     letter-spacing: 10px;
   }
 }
@@ -85,15 +83,15 @@ a:active {
     font-size: 3em;
   }
 
-  .lista li {
+  .lista button {
     width: 400px;
-    padding: 30px;
-    margin: 0 0 30px 0;
+    padding: 35px;
+    margin: 20px 30px;
     letter-spacing: 6px;
   }
 
-  .lista li:hover,
-  .lista li:active {
+  .lista button:hover,
+  .lista button:active {
     letter-spacing: 12px;
   }
 }
