@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 class="display-4">Editar</h1>
+    <div class="container text-center d-flex">
+      <form id="form-editar" class="form bg-light m-3 p-3">
+        <div class="form-group">
+          <label for="usuario">Usuario:</label>
+          <input type="text" id="user" />
+        </div>
+        <div class="form-group">
+          <label for="pass">Contrasena:</label>
+          <input type="password" id="pass" />
+        </div>
+        <div class="form-group">
+          <label for="mail">Ingrese su mail:</label>
+          <input type="email" id="mail" disabled />
+        </div>
+        <div class="form-group">
+          <label for="celular">Numero de celular</label>
+          <input type="text" id="celular" />
+        </div>
+        <div class="radio-group my-3">
+          <input type="radio" name="admin" id="admin" />Admin
+          <input type="radio" name="admin" id="noadmin" />No Admin
+        </div>
+        <div class="buttons-group m-0">
+          <a href="./listadoUsuarios.html"
+            ><button class="btn btn-secondary">Cancelar</button></a
+          >
+          <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+      </form>
+    </div>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/editarUser.js"></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
