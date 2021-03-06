@@ -21,13 +21,18 @@ window.onload = function() {
   }
 };
 
-// Boton Editar Usuarios
+// Event listener del boton editarUsuarios
 document.getElementById('editarUsuarios').addEventListener('click', function(e){
   // Redirect
-  window.location.href = "./listadoUsuarios.html";
+  window.location.href = "./listado.html";
 
   e.preventDefault();
 });
 
+// Event listener del botonLogout
+document.getElementById('botonLogout').addEventListener('click', function(e){
+  borrarSesion();
+  e.preventDefault();
+});
 
 

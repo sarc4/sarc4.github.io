@@ -19,11 +19,18 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <title>Editar Usuarios</title>
+    <title>Lista Usuarios</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="display-4">Editar Usuarios</h1>
+      <h1 class="display-4">Lista Usuarios</h1>
+      <div class="text-right">
+        <a href="./registrar.html">
+          <button class="btn bg-primary text-light" id="boton-nuevo">
+            <i class="fas fa-plus-circle"></i> Nuevo
+          </button>
+        </a>
+      </div>
       <table class="table bg-light mb-3">
         <thead>
           <tr id="primerFila">
@@ -40,13 +47,13 @@
         <tbody></tbody>
       </table>
       <div class="text-right">
-        <button class="btn btn-warning" id="logout" onclick="borrarSesion()">
-          Logout
+        <button class="btn btn-warning" id="botonLogout">
+          <i class="fas fa-sign-out-alt"></i> Logout
         </button>
       </div>
     </div>
-    <script src="./js/funciones.js"></script>
-    <script src="./js/admin.js"></script>
+    <script src="../funciones.js"></script>
+    <script src="./js/listado.js"></script>
 
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"

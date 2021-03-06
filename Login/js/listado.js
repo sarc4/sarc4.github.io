@@ -27,13 +27,13 @@ window.onload = function() {
 };
   
 
-// Event listener del boton editar
+// Event listener del icono editar
 tbody.addEventListener('click', function(e) {
   let indice = (e.target.parentElement.parentElement.parentElement.firstElementChild.innerText);
   localStorage.setItem('indiceUsuario', indice);
 });
 
-// Event listener del boton delete
+// Event listener del icono delete
 tbody.addEventListener('click', function(e) {
   //si estoy presionando el icono trash
   if(e.target.classList.contains("fa-trash")) {
@@ -54,4 +54,10 @@ tbody.addEventListener('click', function(e) {
       window.onload();
     }
   }
+});
+
+// Event listener del botonLogout
+document.getElementById('botonLogout').addEventListener('click', function(e){
+    borrarSesion();
+    e.preventDefault();
 });

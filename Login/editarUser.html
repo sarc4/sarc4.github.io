@@ -16,8 +16,8 @@
   </head>
   <body>
     <h1 class="display-4">Editar</h1>
-    <div class="container text-center d-flex">
-      <form id="form-editar" class="form bg-light m-3 p-3">
+    <div class="container text-center" id="container-editar">
+      <form id="form-editar" class="form bg-light p-3">
         <div class="form-group">
           <label for="usuario">Usuario:</label>
           <input type="text" id="user" />
@@ -38,15 +38,17 @@
           <input type="radio" name="admin" id="admin" />Admin
           <input type="radio" name="admin" id="noadmin" />No Admin
         </div>
-        <div class="buttons-group m-0">
-          <a href="./listadoUsuarios.html"
-            ><button class="btn btn-secondary">Cancelar</button></a
-          >
-          <button type="submit" class="btn btn-primary">Editar</button>
-        </div>
       </form>
+      <div class="buttons-group">
+        <a href="./listado.html"
+          ><button class="btn btn-secondary">Cancelar</button></a
+        >
+        <button type="submit" id="botonEditar" class="btn btn-primary">
+          Editar
+        </button>
+      </div>
     </div>
-    <script src="./js/funciones.js"></script>
+    <script src="../funciones.js"></script>
     <script src="./js/editarUser.js"></script>
 
     <script

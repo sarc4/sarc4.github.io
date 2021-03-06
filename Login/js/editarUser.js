@@ -5,7 +5,7 @@ let indice = (localStorage.getItem('indiceUsuario')-1);
 //usuario a editar
 let usuarioAModificar = listaUsuarios[indice];
 
-//muestro form
+//muestro el form para editar
 window.onload = function() {
   //muestro datos user
   document.getElementById("user").value = usuarioAModificar.user;
@@ -20,7 +20,7 @@ window.onload = function() {
 };
 
 //event del boton editar
-document.getElementById('form-editar').addEventListener('submit', function(e){
+document.getElementById('botonEditar').addEventListener('click', function(e){
   // Obtengo los datos nuevos de los inputs
   let nuevoUser = document.getElementById("user").value;
   let nuevoPass = document.getElementById("pass").value;
@@ -31,7 +31,7 @@ document.getElementById('form-editar').addEventListener('submit', function(e){
   }
   // Valido si el nuevo user ya existe
   let usuarioDisponible = validarUsuarioDisponible(listaUsuarios, nuevoUser);
-  if (usuarioDisponible = true) {
+  if (usuarioDisponible == true) {
     usuarioAModificar.user = nuevoUser;
     usuarioAModificar.pass = nuevoPass;
     usuarioAModificar.celular = nuevoCelular;
@@ -42,12 +42,13 @@ document.getElementById('form-editar').addEventListener('submit', function(e){
     // Actualizo el usuarioAModificar a la lista
     listaUsuarios[indice] = usuarioAModificar;
     console.log('usuario actualizado');
+    
     // Actualizo la lista en LS
     localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
     console.log('lista de usuarios actualizada');
     
     // Redirect
-    window.location.href = "./listadoUsuarios.html";
+    window.location.href = "./listado.html";
   } else {
     alert('Ese nombre de usuario no esta disponible');
   }

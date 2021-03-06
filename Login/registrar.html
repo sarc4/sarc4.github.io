@@ -7,15 +7,22 @@
 
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <title>Register</title>
+    <title>Registrar</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1 class="display-4">Registro</h1>
+    <h1 class="display-4">Registrar</h1>
     <div class="container text-center d-flex">
       <form id="form-register" class="form bg-light m-3 p-3">
         <div class="form-group">
@@ -42,21 +49,23 @@
           <input type="radio" name="admin" id="admin" />Admin
           <input type="radio" name="admin" />No Admin
         </div>
-        <div class="form-group m-0">
-          <a href="./index.html"
-            ><button class="btn btn-secondary">Cancelar</button></a
-          >
-          <button type="submit" class="btn btn-primary">Registrar</button>
+        <div class="buttons-group text-center m-0">
+          <button class="btn btn-secondary text-light" id="botonCancelar">
+            <i class="fas fa-arrow-left"></i> Cancelar</button>
+
+          <button class="btn bg-primary text-light" id="botonRegistrar">
+            <i class="fas fa-plus-circle"></i> Registrar</button>
+        </div>
         </div>
       </form>
     </div>
-    <script src="./js/funciones.js"></script>
-    <script src="./js/register.js"></script>
-
+    <script src="../funciones.js"></script>
+    <script src="./js/registrar.js"></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>

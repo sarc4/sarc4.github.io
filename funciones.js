@@ -33,14 +33,16 @@ function validarUsuario(listaUsuarios, usuario_imput, pass_imput) {
 //DEF Validar solo usuario cuando se edita el nuevo nombre de usuario
 function validarUsuarioDisponible(listaUsuarios, nuevoUser) {
   let userDisponible=true;
-  listaUsuarios.forEach(usuario => {
-      if (usuario.user == nuevoUser) {
-        userDisponible = false  
+  //Indice de usuario que estoy editando
+  let indice = localStorage.getItem('indiceUsuario')-1;
+  listaUsuarios.forEach(function(usuario, index) {
+    //Comparo con todos menos con el que estoy editando, si el user ya existe, no esta disponible
+      if (indice != index && usuario.user == nuevoUser) {
+        userDisponible = false;  
       }
-    });
-    return userDisponible;
+  });
+  return userDisponible;
 }
-
 
 //DEF Validar usuario en existencia, en Registrar
 function validarNombreDeUsuario(listaUsuarios, usuario_imput) {
@@ -60,5 +62,16 @@ function borrarSesion() {
   if(localStorage.getItem('indiceUsuario'))
     localStorage.removeItem('indiceUsuario');
   // Redirect
+  window.location.href = "./index.html"; 
+}
+
+//DEF boton registrar/boton volver, si el usuario esta logueado y es admin redirecciono al listado, si no al login
+function validarSiEsAdmin() {
+  let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado'));
+  if(usuarioLogueado && usuarioLogueado.admin) {
+    // Redirect
+  window.location.href = "./listado.html";
+} else {
   window.location.href = "./index.html";
+  }
 }

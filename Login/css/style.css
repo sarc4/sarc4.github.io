@@ -12,24 +12,27 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
-#perfil label {
-  font-weight: bold;
-}
-
 .buttons-group {
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin: 0 auto;
+  max-width: 400px;
 }
+
 .card {
-  width: 400px;
+  max-width: 400px;
+  margin: 2rem auto 1rem auto;
+}
+.card label {
+  font-weight: bold;
 }
 
 .btn {
   width: 132px;
   height: 38px;
+  text-align: center;
 }
+
 #editarUsuarios {
   display: none;
 }
@@ -37,6 +40,7 @@ h1 {
 #form-register,
 #form-editar {
   width: 400px;
+  margin: 0 auto 1rem auto;
 }
 
 #login {
@@ -58,4 +62,11 @@ h1 {
 .radio-group input {
   margin-left: 3rem;
   align-items: center;
+}
+
+#boton-nuevo {
+  margin-bottom: 1rem;
+}
+#boton-nuevo a {
+  text-decoration: none;
 }
